@@ -1,0 +1,13 @@
+<div class="mt-[4rem]">
+    <app-main-carousel />
+</div>
+
+
+<div>
+    <ng-container *ngFor="let category of categories">
+        <ng-container *ngIf="category!.data!.length > 0">
+            <app-product-card-slider [title]="category?.label" [products]="category?.data">
+            </app-product-card-slider>
+        </ng-container>
+    </ng-container>
+</div>
